@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drexxy - Entertainment For School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .tutorial {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .checklist {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 200px;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drexxy - Entertainment For School</h1>
+    <div class="tutorial">
+        <h2>Tutorial</h2>
+        <div class="video-container">
+            <video controls width="100%" height="auto">
+                <source src="202310121849.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <form onsubmit="redirectToLink(); return false;">
+        <label for="idInput">Enter ID:</label>
+        <input type="text" id="idInput" placeholder="Enter ID" required>
+        <button type="submit">Redirect</button>
+    </form>
+    <div class="checklist">
+        <h2>To-Do List</h2>
+        <ul>
+            <li> - Series Compatibility</li>
+            <li> - Songs Maybe</li>
+        </ul>
+    </div>
+    <footer>&copy; 2023 Drexxy. All rights reserved.</footer>
+    <script>
+        function redirectToLink() {
+            const id = document.getElementById("idInput").value;
+            const redirectUrl = `https://vidsrc.to/embed/movie/${id}`;
+            window.open(redirectUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
